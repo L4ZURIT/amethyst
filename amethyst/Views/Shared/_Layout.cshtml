@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body>
+    <div>
+        <a class = "nav-link" asp-controller = "Home" asp-action = "Index"> MAIN</a>
+        <a class = "nav-link" asp-controller = "Account" asp-action = "Logout"> Выйти</a>
+        
+    </div>
+    <div class = "container">
+        @RenderBody()
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿@model AutorizationViewModel
+@{
+    Layout = "_EnterLayout";
+}
+
+    <form asp-action = "Login"  asp-controller="Account" asp-anti-forgery="true">
+        
+        <div class = "he">
+             <h3>Вход</h3>
+        </div>
+       
+
+        <label for="login">Логин</label>
+        <input asp-for = "login" type="text" placeholder="" >
+        <span asp-validation-for = "login" class = "text-danger"></span>
+
+        <label for="password">Пароль</label>
+        <input asp-for = "password" type="password" placeholder="">
+        <span asp-validation-for = "password" class = "text-danger"></span>
+
+        <h5>@ViewBag.msg</h5>
+
+        @*<label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password">*@
+
+        <button>Войти</button>
+        
+            <div class="social">
+          <a asp-controller = "Account" asp-action = "Sad" role = "button" class="btn go">Нет пароля</a>
+          <a asp-controller = "Account" asp-action = "Registration" class="fb btn">Регистрация</a>
+      </div>
+
+    </form>
+
+

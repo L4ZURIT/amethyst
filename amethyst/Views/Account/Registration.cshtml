@@ -1,0 +1,33 @@
+﻿@model employee
+@{
+    Layout = "_EnterLayout";
+}
+
+    <form asp-action = "Registration" method = "post">
+        <div class = "he">
+             <h3>Регистрация</h3>
+        </div>
+
+        <label for="fio">Введите ФИО</label>
+        <input asp-for = "fio" type="text" placeholder="Фамилия Имя Отчество" id="fio">
+        <span asp-validation-for = "fio" class = "text-danger"></span>
+
+        <label for="uie">Уникальный идентификатор работника</label>
+        <input asp-for = "uie" type="text" placeholder="k4kl5" id="fio">
+        <span asp-validation-for = "uie" class = "text-danger"></span>
+
+        <h5>@ViewBag.msg</h5>
+
+        @*<label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password">*@
+
+        <button>Отправить запрос</button>
+
+         <div class="social">
+          <a asp-controller = "Account" asp-action = "Login" class="go btn">Вход</a>
+          <a asp-controller = "Account" asp-action = "Register" class="fb btn">Аккаунт</a>
+        </div>
+  
+    </form>
+
+         
